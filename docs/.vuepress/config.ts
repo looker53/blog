@@ -15,7 +15,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "泽泽",
+      title: "泽泽 Keep Moving",
       description: '永不止步',
     }
   },
@@ -156,11 +156,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     pageButton: false, // 是否显示快捷翻页按钮，默认true
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
-    sidebar: 'structuring',
+    sidebar: 'auto',
 
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
-      name: 'jiubing', // 必需
+      name: 'yuze', // 必需
       link: 'https://github.com/looker53', // 可选的
     },
 
@@ -195,9 +195,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 页脚信息
     footer: {
-      createYear: 2022, // 博客创建年份
+      createYear: 2020, // 博客创建年份
       copyrightInfo:
-        '九柄 | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
+        '泽泽', // 博客版权信息，支持a标签或换行标签</br>
     },
 
     // 自定义hmtl(广告)模块

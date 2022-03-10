@@ -39,20 +39,19 @@ const htmlModule: VdoingThemeConfig['htmlModules'] = {
 
   homeSidebarB:
     `<div style="padding: 0.95rem">
-    <p style="
+    <div style="
       color: var(--textColor);
       opacity: 0.9;
       font-size: 20px;
       font-weight: bold;
-      margin: 0 0 8px 0;
-    ">公众号</p>
-    <p>
-    『九柄』，扫码关注更多软件测试内容
-    </p>
-    <img src=""  style="width:100%;" />
+      margin: 0 0 0 0;
+    ">联系我</div>
+    <div>
+    有问题请加我微信，备注暗号「博客」
+    </div>
+    <img src="img/qrcode.jfif"  style="width:100%;" />
     
     </div>`,
-
 
   // `<!-- 纵向自适应 -->
   // <ins class="adsbygoogle"

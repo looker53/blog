@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /img/logo.png
-heroText: 泽泽碎碎念
+heroText: 泽泽Keep Moving
 # tagline: 让测试更简单
 # sidebar: false
 actionText: 让测试更简单 →
