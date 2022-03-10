@@ -81,9 +81,7 @@ def test_read_1000_lines_data():
 
 而且在Python语言当中，内置了csv格式的处理模块，用法非常简单，没有太多额外的学习成本。
 
-
-
-```plain
+```python
 import csv
 def test_insert_1000_lines_data():
     lines = 1000
@@ -99,6 +97,8 @@ def test_read_1000_lines_data():
         for row in csv_reader:
             print(row)
 ```
+
+
 
 
 
