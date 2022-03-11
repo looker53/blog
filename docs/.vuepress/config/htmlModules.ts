@@ -49,7 +49,7 @@ const htmlModule: VdoingThemeConfig['htmlModules'] = {
     <div>
     有问题请加我微信，备注暗号「博客」
     </div>
-    <img src="img/qrcode.jfif"  style="width:100%;" />
+    <img src="/img/avatar.png"  style="width:100%;" />
     
     </div>`,
 

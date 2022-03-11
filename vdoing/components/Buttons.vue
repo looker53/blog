@@ -1,5 +1,6 @@
 <template>
   <div class="buttons">
+    
     <transition name="fade">
       <div
         title="返回顶部"
@@ -40,6 +41,11 @@
           </li>
         </ul>
       </transition>
+    </div>
+    <div>
+      <div style="font-size:small; color:grey">加微信请备注「博客」</div>
+      <div style="font-size:small; color:grey">不然可能无法通过</div>
+      <img src="/img/avatar.png" width="100px" height="100px">
     </div>
   </div>
 </template>
