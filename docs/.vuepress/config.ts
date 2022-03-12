@@ -161,7 +161,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
       name: 'admin', // 必需
-      link: 'https://github.com/looker53', // 可选的
+      // link: 'https://github.com/looker53', // 可选的
     },
 
     // // 博主信息 (显示在首页侧边栏)
@@ -320,14 +320,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   },
     // },
 
-    // 'vuepress-plugin-comment': {
-    //   choosen: 'valine',
-    //   options: {
-    //     el: '#valine-vuepress-comment',
-    //       appId: 'Your own appId',
-    //       appKey: 'Your own appKey',
-    //   },
-    // },
+    'vuepress-plugin-comment': {
+      choosen: 'valine',
+      options: {
+        el: '#valine-vuepress-comment',
+          appId: 'g4E0q8wqedWhJ6JLojRMfmyD-gzGzoHsz',
+          appKey: 'qD7501HykTrETqnbjqdrUvSF',
+      },
+    },
 
 
 
