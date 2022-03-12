@@ -215,7 +215,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         content: '软件测试博客,自动化测试博客,测试开发博客,软件测试,自动化测试,测试开发,自动化测试面试题,测试开发面试题,软件测试面试题,Python,Selenium,Appium,Cypress,Playwright,接口自动化,ui自动化,app自动化,web自动化，Jenkins,Docker',
       },
     ],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
+    // ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
     // [
     //   'script',
