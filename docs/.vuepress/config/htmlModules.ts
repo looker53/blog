@@ -53,6 +53,13 @@ const htmlModule: VdoingThemeConfig['htmlModules'] = {
     
     </div>`,
 
+    pageB:
+    `<div style="padding: 0.95rem">
+    <p>本文完，感谢你的耐心阅读，如有需要可加我微信，备注「博客」并说明原因，我们一起进步，下次见。</p>
+    <img src="/img/avatar.png" />
+    
+    </div>`,
+
   // `<!-- 纵向自适应 -->
   // <ins class="adsbygoogle"
   //     style="display:block;padding: 0.95rem;"

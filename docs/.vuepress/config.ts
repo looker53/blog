@@ -15,7 +15,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "泽泽 Keep Moving",
+      title: "技术九柄剑",
       description: '永不止步',
     }
   },
@@ -160,7 +160,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
-      name: 'yuze', // 必需
+      name: 'admin', // 必需
       link: 'https://github.com/looker53', // 可选的
     },
 
@@ -197,7 +197,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2020, // 博客创建年份
       copyrightInfo:
-        '泽泽', // 博客版权信息，支持a标签或换行标签</br>
+        '九柄剑', // 博客版权信息，支持a标签或换行标签</br>
     },
 
     // 自定义hmtl(广告)模块

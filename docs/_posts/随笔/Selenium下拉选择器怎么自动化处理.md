@@ -1,3 +1,13 @@
+---
+title: Selenium下拉选择器怎么自动化处理
+date: 2022-03-11 15:56:10
+permalink: /pages/425e08/
+sidebar: auto
+categories:
+  - 随笔
+tags:
+  - 
+---
 ## 1. 点击 Select 下拉框选项元素
 
 ```python
