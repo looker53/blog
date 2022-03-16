@@ -82,6 +82,70 @@ class LoginPage:
 
 
 
+这种方式把元素定位方式也分离了。但是这种元素定位的表达式可读性也不是很强，可以换用 property 方式来表示元素，所有的元素统一放在一起，修改起来也比较方便。
+
+```python
+class LoginPage:
+    def __init__(self, driver)
+    	self.driver = driver
+        
+    @property
+    def username_element(self):
+        return self.driver.find_element('id', 'idInput')
+    
+    @property
+    def password_element(self):
+        return self.driver.find_element('id', 'pwdInput')
+    
+    @property
+    def submit_element(self):
+        return self.driver.find_element('id', 'loginBtn')
+    
+    def login(self, name, password):
+        self.username_element.send_keys(name)
+        self.password_element.send_keys(password)
+        self.submit_element.click()
+```
+
+
+
+第三种方式可以充分利用Python的描述符特性，你会发现很多序列化库或者ORM框架都有类似的用法。
+
+```python
+class LoginPage:
+    def __init__(self, driver)
+    	self.driver = driver
+        
+    username = Element(css='#idInput', desc='用户名输入框')
+    password = Element(css='#pwdInput', desc='密码输入框')
+    confirm = Element(css='#loginBtn', desc='登录确认按钮')
+    
+   	def login(self, name, password):
+        self.username.send_keys(name)
+        self.password.send_keys(password)
+        self.confirm.click()
+        
+```
+
+
+
+而 Element 类可以通过 Python 描述符实现，这里为了方便，只定义了xpath的元素定位方法：
+
+```python
+class Element:
+
+    def __init__(self,xpath=None,desc=''):
+        self.xpath = xpath
+        self.desc = desc
+
+    def __get__(self, instance, owner):
+        driver = instance.browser
+        el = driver.find_element('xpath', self.xpath)
+        return el
+```
+
+
+
 
 
 ## PO模式和DDD
@@ -119,5 +183,4 @@ class LoginPage:
 - 便于维护。每一个页面的操作都被单独的存放在一个类文件中，当前端页面被修改之后，只需要找到对应类文件进行修改，其他的代码并不需要进行修改，这符合单一职责原则。
 - 便于重复使用。在进行自动化测试的时候，一个测试由多个测试步骤组成，这些测试步骤可能涉及到多个页面的操作。而用例与用例之间的操作可能重合。PO模式可以重复利用这些测试步骤，简化代码的编写。
 - 提高了可读性。页面的操作都被以函数的形式封装起来了。函数名就具备注释的作用，其他人阅读代码时可以通过函数了解业务。
-
 
