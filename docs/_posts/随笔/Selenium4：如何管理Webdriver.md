@@ -1,3 +1,13 @@
+---
+title: Selenium4：如何管理Webdriver
+date: 2022-03-17 16:02:15
+permalink: /pages/246d97/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 最近 selenium 进行了一个更新，官网宣传有比较大的更新， 于是我毫不犹豫的着手升级，没想到直接掉坑里了...现在我们来还原一下整个操作过程。
 
 

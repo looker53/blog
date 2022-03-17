@@ -1,3 +1,13 @@
+---
+title: Web Service接口服务测试教程
+date: 2022-03-16 15:46:35
+permalink: /pages/9c8fe5/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - 接口
+---
 看过网上很多对Web Service的解释，有些文章写得通俗易懂，但是缺少深度解读；有的文章图文并茂，但是没有现成案例；有的文章非常详细，但是没有直观感受。
 
 

@@ -1,3 +1,13 @@
+---
+title: Appium实现图片放大缩小（双指操作）
+date: 2022-02-25 15:24:25
+permalink: /pages/8f8a52/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - appium
+---
 既然是新用法，肯定是在其他地方不会随处见到的，搞不好还是独一份。
 
 

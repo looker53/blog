@@ -1,3 +1,13 @@
+---
+title: Selenium连接已存在的浏览器2
+date: 2022-02-17 14:54:05
+permalink: /pages/142e58/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 测试和爬虫对selenium并不会陌生，现有的教程已经非常多。但是因为 selenium 封装的方法比较底层，所以灵活性非常高，我们可以基于这种灵活性来实现非常丰富的定制功能。
 
 本系列文章：

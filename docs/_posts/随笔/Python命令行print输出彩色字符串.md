@@ -4,9 +4,9 @@ date: 2022-03-09 19:00:59
 permalink: /pages/f951e1/
 sidebar: auto
 categories:
-  - 随笔
+  - 语言
 tags:
-  - 
+  - python
 ---
 在 Python 中打印彩色文本，不是必须掌握的编程技巧。对，不是比较掌握的，平时显示的黑色字体也不是不能用。
 

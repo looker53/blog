@@ -1,3 +1,14 @@
+---
+title: Webview自动化测试实现思路
+date: 2022-02-25 14:23:15
+permalink: /pages/713cde/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - uiautomator2
+  - webview
+---
 移动端 app 自动化框架很多，但是有一些框架因为不支持混合应用测试，一直没有完全流行。比较典型的是经典的 Python 框架 uiautomator2, 这个框架简单好用，没有 appium 那样复杂的 api 调用，受到不少 python 自动化工程师的青睐。
 
 但是不管是官方文档，还是民间教程，基本都没有涉及到用它做混合应用测试，本文提供一种非常简单的方法，只需要多加 4 行代码，就能让 uiautomator2 支持混合应用测试。

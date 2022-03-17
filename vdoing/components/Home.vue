@@ -12,7 +12,7 @@
           !homeData.features && !homeData.heroImage && `padding-top: 7rem`
         "
       >
-        <header class="hero">
+        <!-- <header class="hero">
           <img
             v-if="homeData.heroImage"
             :src="$withBase(homeData.heroImage)"
@@ -27,7 +27,7 @@
           <p class="action" v-if="homeData.actionText && homeData.actionLink">
             <NavLink class="action-button" :item="actionLink" />
           </p>
-        </header>
+        </header> -->
 
         <!-- PC端features块 s -->
         <div class="features" v-if="hasFeatures && !isMQMobile">
@@ -222,7 +222,8 @@ export default {
         if (this.$themeConfig.bodyBgImg) {
           return ''
         } else {
-          return 'background: var(--mainBg);color: var(--textColor)'
+          // return 'background: var(--mainBg);color: var(--textColor)'
+          return ''
         }
       } else if (bannerBg.indexOf('background') > -1) { // 自定义背景样式
         return bannerBg
@@ -340,7 +341,7 @@ export default {
 .home-wrapper
   .banner
     width 100%
-    min-height 450px
+    // min-height 150px
     margin-top $navbarHeight
     color $bannerTextColor
     position relative
@@ -353,15 +354,15 @@ export default {
       overflow hidden
       .hero
         text-align center
-        margin-top 3rem
+        margin-top 1.5rem
         img
           max-width 100%
           max-height 240px
           display block
-          margin 2rem auto 1.5rem
+          margin 1rem auto 0.5rem
         h1
           margin 0
-          font-size 3.2rem
+          font-size 2.2rem
         .description, .action
           margin 1.5rem auto
         .description
@@ -495,7 +496,7 @@ export default {
       .banner-conent
         .hero
           h1
-            font-size 2.5rem
+            font-size 1.5rem
           .description
             font-size 1rem
         .feature

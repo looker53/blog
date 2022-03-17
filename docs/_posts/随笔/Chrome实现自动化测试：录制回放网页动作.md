@@ -1,3 +1,13 @@
+---
+title: Chrome实现自动化测试：录制回放网页动作
+date: 2022-03-17 15:38:45
+permalink: /pages/6d4ffa/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - default
+---
 Chrome 浏览器是真的恐怖，它会把相关的小工具都卷死。从它诞生至今，创造了一个又一个的传奇，现在可以看到基于它的操作系统 chrome os ，还能买到用它做系统的笔记本电脑。
 
 

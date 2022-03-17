@@ -1,3 +1,13 @@
+---
+title: Selenium关键字驱动：结合Pytest优化测试过程
+date: 2022-02-21 15:02:09
+permalink: /pages/cc910d/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 在 [selenium怎么实现关键字驱动](https://blog.csdn.net/looker53/article/details/122830444) 中，我编写了一个非常简单的关键字驱动程序， 不过这个程序只是跑通了功能，还有很多可以优化的地方，这篇文章我想通过 pytest 来简化自动化测试用例的编写，使用的是比较基础的 pytest 功能。 下篇文章我再写个复杂版的，从底层直接执行 yaml 文件作为用例。
 
 

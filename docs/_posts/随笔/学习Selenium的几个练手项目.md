@@ -1,3 +1,13 @@
+---
+title: 学习Selenium的几个练手项目
+date: 2022-03-09 18:55:11
+permalink: /pages/8650f7/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 学习自动化测试最难的是没有合适的项目练习。 测试本身既要讲究科学，又有艺术成分，单单学几个 api 的调用很难应付工作中具体的问题。
 
 

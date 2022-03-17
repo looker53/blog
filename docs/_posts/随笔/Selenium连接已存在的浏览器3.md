@@ -1,3 +1,13 @@
+---
+title: Selenium连接已存在的浏览器3
+date: 2022-02-18 14:55:11
+permalink: /pages/5bc3c9/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 **selenium还能这么玩系列文章**
 
 - [selenium还能这么玩1：连接手动打开的浏览器](https://blog.csdn.net/looker53/article/details/122951590)

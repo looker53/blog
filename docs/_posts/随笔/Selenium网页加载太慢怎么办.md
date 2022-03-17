@@ -1,3 +1,13 @@
+---
+title: Selenium网页加载太慢怎么办
+date: 2022-03-14 17:43:34
+permalink: /pages/8f0b29/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 遇到网页加载慢，selenium运行效率降低，可以通过修改页面加载策略提升自动化效率。
 
 ## selenium加载很慢

@@ -4,9 +4,9 @@ date: 2022-03-09 13:57:40
 permalink: /pages/a95c7e/
 sidebar: auto
 categories:
-  - 随笔
+  - 测试
 tags:
-  - 
+  - 视觉感知
 ---
 ## 什么是视觉测试
 

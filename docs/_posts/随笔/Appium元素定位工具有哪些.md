@@ -1,3 +1,13 @@
+---
+title: Appium元素定位工具有哪些
+date: 2022-02-26 14:17:32
+permalink: /pages/d74c42/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - appium
+---
 UI 自动化测试时，先要定位到需要操作的元素，然后才能执行指令。 在网页端可以非常方便的通过 devtools 工具（也就是经常说的 F12) 获取和编写元素定位表达式。
 
 

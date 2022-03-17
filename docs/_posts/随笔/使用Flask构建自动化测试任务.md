@@ -4,9 +4,9 @@ date: 2021-03-10 19:48:54
 permalink: 
 sidebar: auto
 categories:
-  - 随笔
+  - 测试
 tags:
-  - 
+  - flask
 ---
 
 **1、自动化**

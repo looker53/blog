@@ -1,3 +1,13 @@
+---
+title: Selenium关键字驱动：实现测试过程
+date: 2022-02-20 15:01:04
+permalink: /pages/0c9354/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - selenium
+---
 要做 ui 自动化测试，使用关键字驱动可以说是必须会的一种测试方式，它既可以在纯代码的自动化程序中运行，也可以在测试平台中使用。
 
 

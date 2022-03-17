@@ -4,9 +4,9 @@ date: 2022-03-11 15:56:10
 permalink: /pages/425e08/
 sidebar: auto
 categories:
-  - 随笔
+  - 测试
 tags:
-  - 
+  - selenium
 ---
 ## 1. 点击 Select 下拉框选项元素
 
