@@ -7,6 +7,9 @@ categories:
   - 测试
 tags:
   - selenium
+  - pom
+  - ddd
+  - 描述符
 ---
 
 

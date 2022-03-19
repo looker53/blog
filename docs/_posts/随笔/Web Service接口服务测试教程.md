@@ -7,6 +7,10 @@ categories:
   - 测试
 tags:
   - 接口
+  - webservice
+  - zeep
+  - wsdl
+  - soup
 ---
 看过网上很多对Web Service的解释，有些文章写得通俗易懂，但是缺少深度解读；有的文章图文并茂，但是没有现成案例；有的文章非常详细，但是没有直观感受。
 
@@ -26,8 +30,6 @@ tags:
 
 服务可以分为两种：本地服务和网络服务。本地服务是在当前计算机上能访问的服务，其他计算机无法访问；网络服务是在另一台计算机上提供服务，其他计算机通过网络连接访问服务，网络既可以是远程的web服务，也可以是局域网服务。
 
-（图）
-
 
 
 举个例子，我想做一个书籍阅读的App，我已经把书籍的展示页面，收藏书籍这些功能都实现了，但是我既不是写作者，也不是出版社，我根本就没有任何的新闻内容可以展示到 App 上。
@@ -35,6 +37,8 @@ tags:
 
 
 我想了两个办法：第一个办法就是把我现在已经有的书籍录入到App中，用户安装我的App后，不需要联网也是可以阅读书籍的，我提供的书籍数据这种服务就是本地服务。
+
+![image-20220319195828846](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/image-20220319195828846.png)
 
 
 
@@ -44,7 +48,7 @@ tags:
 
 这种通过网络去获取其他电子内容的服务就是Web Service。通过这种方式，我还可以实现服务聚合（Service Mashup），同时和多个出版社合作，我可以自己实现一套统一的 Web Service接口，对接不同的出版社内容。任何形式的网络服务，不管返回HTML、JSON、XML还是图片，都是Web Service。
 
-
+![image-20220319195946847](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/image-20220319195946847.png)
 
 
 
@@ -244,31 +248,52 @@ SOAPAction: "http://www.w3.org/2003/05/soap-envelope"
 
 
 
+## Python 测试 web service 接口
+
+Python 测试 web service 接口和 postman 没什么区别，只是把界面操作转化成代码。
+
+1. requests.post 可以直接发送 http 请求
+2. 准备好 SOUP 格式的请求体，传入 data 参数
+3. 请求头中把 content-type 修改成 appliction/xml
+
+```python
+import requests
+
+data = """\
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Body>
+        <getItemById xmlns="http://bookstore.parasoft.com/">
+            <id xmlns="">1</id>
+        </getItemById>
+    </Body>
+</Envelope>
+"""
+url = 'https://parabank.parasoft.com/parabank/services/store-01'
+headers = {'content-type': 'application/xml'}
+resp = requests.post(url, data=data,)
+print(resp.text)
+```
 
 
-web service服务
 
-web service原理
+## Python 测试 web service 的终极方案
 
-web service协议
+俗话说，有轮子就不要自己再造，Python之所以这么多人用就是生态完善，你能想到的场景基本都有现成的库可以调用。而访问 web service 接口可以使用 zeep 这个库。
 
-web service接口
+有了它之后，你只需要传入 wsdl 文件或者url地址，zeep 会自动帮你解析。 你也不用再自己组装 SOUP 数据，zeep 会帮你组装。 访问接口后的响应结果你也不用解析，zeep 帮你解析了。
 
-web service调用
+```python
+import zeep
 
-web service教程
+wsdl = 'https://parabank.parasoft.com/parabank/services/store-01?wsdl'
+client = zeep.Client(wsdl=wsdl)
+resp = client.service.getItemById(1)
+print(resp['name'])
+```
 
-web service测试
+是不是很简洁？现在我们就讲这么多把，后面有时间再讲一下 zeep 的系统用法。
 
-web service例子
 
-web service案例
-
-web service示例
-
-web service入门
-
-web service报文
 
 
 
@@ -282,4 +307,5 @@ web service报文
 - [W3C WSDL 2.0](https://www.w3.org/TR/2007/REC-wsdl20-20070626/)
 - [wiki百科：SOUP](https://en.wikipedia.org/wiki/SOAP)
 - [w3c: SOUP](https://www.w3.org/TR/soap/)
+- [zeep](https://github.com/mvantellingen/python-zeep)
 

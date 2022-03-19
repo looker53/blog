@@ -7,6 +7,7 @@ categories:
   - 测试
 tags:
   - selenium
+  - webdriver
 ---
 最近 selenium 进行了一个更新，官网宣传有比较大的更新， 于是我毫不犹豫的着手升级，没想到直接掉坑里了...现在我们来还原一下整个操作过程。
 

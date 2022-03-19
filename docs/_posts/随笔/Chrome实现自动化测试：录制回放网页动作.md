@@ -6,7 +6,9 @@ sidebar: auto
 categories:
   - 测试
 tags:
-  - default
+  - chrome
+  - 录制
+  - 回放
 ---
 Chrome 浏览器是真的恐怖，它会把相关的小工具都卷死。从它诞生至今，创造了一个又一个的传奇，现在可以看到基于它的操作系统 chrome os ，还能买到用它做系统的笔记本电脑。
 

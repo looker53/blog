@@ -1,5 +1,5 @@
 ---
-title: Selenium关键字驱动：结合Pytest自动运行目录下测试用例
+title: Selenium关键字驱动：数据驱动与关键字驱动结合
 date: 2022-02-22 15:02:53
 permalink: /pages/2cd0af/
 sidebar: auto
@@ -7,6 +7,7 @@ categories:
   - 测试
 tags:
   - selenium
+  - 关键字驱动
 ---
 也许你已经看过这两篇文章：
 

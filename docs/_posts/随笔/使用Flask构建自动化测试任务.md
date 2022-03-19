@@ -7,6 +7,11 @@ categories:
   - 测试
 tags:
   - flask
+  - 自动化
+  - 测开
+  - subprocess
+  - 生成器
+  - python
 ---
 
 **1、自动化**
