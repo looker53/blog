@@ -80,6 +80,10 @@ tags:
 
 
 
+参考这篇：https://automationpanda.com/2021/12/29/want-to-practice-test-automation-try-these-demo-sites/
+
+
+
 总的来说，在没有正式的项目经验前，找到一个合适的练手项目，把自己的专业知识转变成可以应用的技能，还是非常好的。希望对正在学习的同学有帮助，如果你也有很好的练习项目，欢迎和我一起分享。
 
 

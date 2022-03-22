@@ -26,10 +26,32 @@ el = driver.find_element('id', "fileinput")
 el.send_keys('/path/of/file.png')
 ```
 
-
 ## 2. input 元素隐藏
 
-opacity,  hidden,  display
+通过修改元素属性，把隐藏的元素属性改掉。
+
+```python
+el = driver.find_element('xpath', '//input[@type="file"]')
+driver.execute_script('arguments[0].style.visibility=\'visible\'', el)
+el.send_keys(r'C:\Users\muji\Desktop\avatar.png')
+```
+
+
+
+比如可以通过这种方式实现百度的以图搜图。
+
+```python
+driver.get('http://www.baidu.com')
+driver.find_element('css selector', '.soutu-btn').click()
+time.sleep(3)
+el = driver.find_element('xpath', '//input[@type="file"]')
+driver.execute_script('arguments[0].style.visibility=\'visible\'', el)
+el.send_keys(r'C:\Users\muji\Desktop\avatar.png')
+```
+
+
+
+
 
 ## 3. 文件选择对话框
 
@@ -72,6 +94,18 @@ dialog["Button"].click()
  pyautogui.hotkey('ctrl', 'v')
  pyautogui.press('enter', presses=2)
 ```
+
+
+
+## 键盘
+
+```python
+keyboard.write('C:\\Users\\muji\\Desktop\\avatar.png')
+time.sleep(1)
+keyboard.press('enter')
+```
+
+注意：百度以图搜图禁用了爬虫，所以在上传文件时会提示「图片上传失败，请重新上传」。
 
 
 
