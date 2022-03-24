@@ -1,3 +1,13 @@
+---
+title: Appium自动化测试教程
+date: 2022-03-23 15:19:47
+permalink: /pages/51522c/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - appium
+---
 
 
 ## 一、确认环境
@@ -10,7 +20,7 @@
 -   启动 Appium 服务，并设置端口
 -   运行 Python 脚本
 
-如果没有安装appium环境请参考：[[Appium环境搭建保姆级教程]]
+如果没有安装appium环境请参考：[Appium环境搭建保姆级教程](https://www.jiubing.site/pages/903546/)
 
 
 ## 二、编写Appium启动脚本

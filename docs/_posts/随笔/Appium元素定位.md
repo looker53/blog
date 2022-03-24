@@ -1,3 +1,13 @@
+---
+title: Appium元素定位
+date: 2022-03-23 16:17:10
+permalink: /pages/1c5728/
+sidebar: auto
+categories:
+  - 测试
+tags:
+  - appium
+---
 无论想在 app 页面中进行怎样的操作，我们先得找到那个要操作的元素。比如你想直接点击一个按钮，那么你就必须要先找到这个按钮。如果你想在输入框当中去输入一些内容，那么你就必须要先找到这个输入框。
 
 这个寻找需要操作的元素的过程，叫做元素定位。
@@ -74,11 +84,14 @@ pip install weditor
 首先，打开浏览器，在任意网页中按快捷键 F12 打开开发者工具，在 element 标签中能看到网页的源代码。任何网页元素，不管是连接，按钮还是输入框，都由一个个 HTML 标签组成。 标签包含了标签名、属性、文本、嵌套子标签等组成部分。
 
 定位元素时，就是根据这些组成部分的特征来查找元素。比如想定位一个输入框：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/104618/1646373501229-00d9f506-8633-45c2-ad51-fc50d7ad5ca7.png#clientId=ua1662688-64a0-4&crop=0&crop=0&crop=1&crop=1&id=Hs50Q&name=image.png&originHeight=28&originWidth=468&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2914&status=done&style=none&taskId=u86a3a9f0-4be6-4909-bead-13758424abc&title=)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220323173429.png)
+
 那么可以作为定位依据的特征有标签名 input、size 属性、name 属性、type 属性等等。 在浏览器的控制台中，可以输入`document.getElementsByName`指令获取到这个元素。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/104618/1646373501285-277b5e2e-84c2-48eb-b952-25de73a01c47.png#clientId=ua1662688-64a0-4&crop=0&crop=0&crop=1&crop=1&id=rZ0t9&name=image.png&originHeight=56&originWidth=513&originalType=binary&ratio=1&rotation=0&showTitle=false&size=6216&status=done&style=none&taskId=u7477003d-7edc-4009-ab16-9b3723bf786&title=)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220323173419.png)
+
 获取方式可以通过 name 属性、id 属性，class 属性等等。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/104618/1646373501298-1aefbeaf-2094-4012-a422-e6e9f32caac4.png#clientId=ua1662688-64a0-4&crop=0&crop=0&crop=1&crop=1&id=jcM0J&name=image.png&originHeight=294&originWidth=653&originalType=binary&ratio=1&rotation=0&showTitle=false&size=39993&status=done&style=none&taskId=udc0a1327-e51c-47df-97f5-263dca0826e&title=)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220323173404.png)
+
 本篇所有示例都使用同一个网址，你可以直接打开进行练习。 网址：[https://petstore.octoperf.com](https://petstore.octoperf.com/actions/Catalog.action)
 
 ### 为什么要用 xpath
@@ -91,10 +104,12 @@ xpath 和 css 选择器都能提供更精准的元素定位服务。他们可以
 
 在浏览器中调试xpath。
 **第一种方式是在开发者工具中按 ctrl + f**，输入 xpath 表达式后可以通过上下箭头查看效果。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/104618/1646373501256-f7c3ada3-afa3-429f-86b9-0408b0e5fea3.png#clientId=ua1662688-64a0-4&crop=0&crop=0&crop=1&crop=1&id=MLyqo&name=image.png&originHeight=277&originWidth=1139&originalType=binary&ratio=1&rotation=0&showTitle=false&size=39301&status=done&style=none&taskId=u7934d011-5b1f-479a-a4fa-b8d463d4ad1&title=)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220323173323.png)
+
 
 **第二种方式在控制台中输入 **`**$x("//div")**`** ，更推荐使用**，谷歌浏览器和火狐浏览器都可以。 输入 xpath 表达式后，在控制台中直接显示定位到的元素。在接下来的所有的语法讲解中，都可以通过打开浏览器练习。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/104618/1646373501265-6db40309-c1b7-4e88-b96e-7e7fdc79d8d8.png#clientId=ua1662688-64a0-4&crop=0&crop=0&crop=1&crop=1&id=AWFCS&name=image.png&originHeight=129&originWidth=910&originalType=binary&ratio=1&rotation=0&showTitle=false&size=11704&status=done&style=none&taskId=ue5adbd47-fdc9-41be-8ed5-3452ff78dd5&title=)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220323173346.png)
+
 
 ### 核心用法
 
@@ -177,7 +192,8 @@ xpath 也支持直接在表达式内获取 text 文本。
 //div[@id="MenuContent"]/a[2]/text()'
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/104618/1646373501915-cb8f140c-fdd2-447d-92a7-dab4906cb7d0.png#clientId=ua1662688-64a0-4&crop=0&crop=0&crop=1&crop=1&id=XUWiz&name=image.png&originHeight=47&originWidth=409&originalType=binary&ratio=1&rotation=0&showTitle=false&size=3626&status=done&style=none&taskId=u22f1565d-532a-4c06-8fc0-b339aecd12b&title=)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220323173237.png)
+
 
 ### 获取元素的属性
 
