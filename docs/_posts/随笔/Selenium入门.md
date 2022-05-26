@@ -1,3 +1,13 @@
+---
+title: Selenium入门
+date: 2022-03-24 22:05:44
+permalink: /pages/80398e/
+sidebar: auto
+categories:
+  - 日记
+tags:
+  - 
+---
 
 
 ## 为什么自动化

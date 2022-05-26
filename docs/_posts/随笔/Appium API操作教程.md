@@ -1,3 +1,13 @@
+---
+title: Appium API操作教程
+date: 2022-03-24 15:27:00
+permalink: /pages/5329c0/
+sidebar: auto
+categories:
+  - 日记
+tags:
+  - 
+---
 ## 点击
 ```python
 el = driver.find_element('id', 'com.bilibili.app.blue:id/agree')

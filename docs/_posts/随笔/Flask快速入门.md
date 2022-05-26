@@ -1,3 +1,13 @@
+---
+title: Flask快速入门
+date: 2022-03-24 17:56:57
+permalink: /pages/d43bf4/
+sidebar: auto
+categories:
+  - 日记
+tags:
+  - 
+---
 
 
 ## 安装
