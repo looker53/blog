@@ -6,7 +6,7 @@ sidebar: auto
 categories:
   - 日记
 tags:
-  - 
+  - appium
 ---
 
 
