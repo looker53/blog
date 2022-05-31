@@ -4,7 +4,7 @@ date: 2022-01-17 19:27:12
 permalink: /pages/4038af/
 sidebar: auto
 categories:
-  - 日记
+  - 测试
 tags:
   - appium
 ---

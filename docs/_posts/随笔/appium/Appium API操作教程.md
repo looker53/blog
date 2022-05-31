@@ -4,7 +4,7 @@ date: 2022-03-24 15:27:00
 permalink: /pages/5329c0/
 sidebar: auto
 categories:
-  - 日记
+  - 测试
 tags:
   - appium
 ---
