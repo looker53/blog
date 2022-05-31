@@ -1,3 +1,13 @@
+---
+title: kubernetes环境搭建
+date: 2022-05-24 13:50:18
+permalink: /pages/236ae0/
+sidebar: auto
+categories:
+  - 日记
+tags:
+  - k8s
+---
 - 虚拟机
 - 安装 minikube
 - 安装 docker

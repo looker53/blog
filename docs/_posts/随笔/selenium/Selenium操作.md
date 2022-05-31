@@ -6,7 +6,7 @@ sidebar: auto
 categories:
   - 日记
 tags:
-  - 
+  - selenium
 ---
 
 
@@ -66,6 +66,123 @@ el.click()
 元素定位时不管选用哪种方式，都要避开那些可能会动态变化的属性，通常含有数字或者加密字符串。
 
 
+
+
+
+- 鼠标
+
+- - 点击
+  - 双击
+  - 右击
+  - 拖动
+  - 悬停
+
+- 键盘
+
+- - 输入
+  - Key Down
+  - Key Up
+
+- 组件
+
+- - 单选
+  - 多选
+  - 下拉框选择
+
+- 其他常用
+
+- - 窗口滚动
+  - 滚动到可视范围
+  - JS 操作
+  - 上传
+  - 下载
+  - 截图
+
+**悬停**
+
+```python
+ def test_01(self, page):
+     page.get('https://www.runoob.com/html/html-tutorial.html')
+     # 悬停
+     actions = ActionChains(page)
+     menu = page.find_element(By.XPATH, "//a[contains(text(),'HTML / CSS')]")
+     actions.move_to_element(menu).perform()
+ 
+     html_el = page.find_element(By.LINK_TEXT, "CSS 教程")
+     html_el.click()
+     time.sleep(3)
+```
+
+**拖动**
+
+```python
+ def test_drag_and_drop(page: Page):
+     page.get('https://demos.telerik.com/kendo-ui/dragdrop/index')
+     start_el = page.find_element(By.ID, "draggable")
+     end_el = page.find_element(By.ID, "droptarget")
+     actions = ActionChains(page)
+     actions.drag_and_drop(start, end).perform()
+```
+
+
+
+**复制粘贴**
+
+```python
+def test_drag_and_drop(self,page):
+     page.get('https://www.baidu.com')
+     page.find_element(By.ID, 'kw').send_keys('明天再学')
+ 
+     actions = ActionChains(page)
+     actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL)
+     actions.perform()
+ 
+     actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL)
+     actions.perform()
+ 
+     actions.key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL)
+     actions.perform()
+ 
+     actions.key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL)
+     actions.perform()
+```
+
+ 
+
+**窗口切换**
+
+```python
+ def test_switch_window(page):
+     page.get("http://www.baidu.com")
+     page.find_element(By.XPATH, '//input[@id="kw"]').send_keys('明天再学')
+     page.find_element(By.ID, 'su').click()
+     #点击打开新窗口
+     page.find_element(By.LINK_TEXT, '知乎').click()
+     #切换窗口
+     page.switch_to.window(page.window_handles[-1])
+     page.find_element(By.NAME, 'username')
+```
+
+
+
+**iframe切换**
+
+```python
+ def test_switch_iframe(page):
+     page.get('https://v4.ketangpai.com/User/login.html')
+     page.find_element(By.LINK_TEXT, '微信登录').click()
+     #iframe切换
+     iframe = page.find_element(By.CSS_SELECTOR, '#login_container>iframe')
+     page.switch_to.frame(iframe)
+     
+     qrcode = page.find_element(By.CSS_SELECTOR, '.qrcode')
+     print(qrcode.get_attribute('src'))
+```
+
+
+
+
+ 
 
 
 
