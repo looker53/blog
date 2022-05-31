@@ -8,6 +8,7 @@ categories:
 tags:
   - uiautomator2
   - webview
+  - selenium
 ---
 移动端 app 自动化框架很多，但是有一些框架因为不支持混合应用测试，一直没有完全流行。比较典型的是经典的 Python 框架 uiautomator2, 这个框架简单好用，没有 appium 那样复杂的 api 调用，受到不少 python 自动化工程师的青睐。
 

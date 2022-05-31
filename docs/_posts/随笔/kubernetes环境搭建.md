@@ -8,6 +8,7 @@ categories:
 tags:
   - k8s
 ---
+
 - 虚拟机
 - 安装 minikube
 - 安装 docker

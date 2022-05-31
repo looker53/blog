@@ -4,7 +4,7 @@ date: 2022-03-24 21:25:19
 permalink: /pages/376c7e/
 sidebar: auto
 categories:
-  - 日记
+  - 测试
 tags:
   - selenium
 ---
