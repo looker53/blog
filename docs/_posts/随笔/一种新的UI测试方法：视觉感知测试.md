@@ -36,9 +36,9 @@ tags:
 
 文字堆叠示例：
 
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220715140126.png)
 
 
-![img](https://api2.mubu.com/v3/document_image/eb4f8f6a-91ae-4143-a1df-f772dc7df50d-10908128.jpg)
 
 
 
@@ -46,7 +46,8 @@ tags:
 
 
 
-![img](https://api2.mubu.com/v3/document_image/50d0e367-0d76-42d9-8f73-65927656f896-10908128.jpg)
+![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/20220715140206.png)
+
 
 
 
@@ -130,4 +131,3 @@ tags:
 
 
 
-我是九柄，感谢你的耐心阅读，更多学习资料可以『+关注』，我们下次见。

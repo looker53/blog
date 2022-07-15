@@ -1,5 +1,5 @@
 ---
-title: Selenium操作
+title: Selenium快速开始
 date: 2022-03-24 21:25:19
 permalink: /pages/376c7e/
 sidebar: auto
@@ -11,22 +11,179 @@ tags:
 
 
 
-
 ## 安装
+
+selenium 提供了很多编程语言的支持，以下操作都是以 Python 为例。 在使用 Selenium 前，首先需要安装好执行环境：1、浏览器；2、chromedriver程序；3、selenium安装包
+
 - pip install selenium
-- 下载 webdriver。chrome 通过 [官方下载 ](https://sites.google.com/a/chromium.org/chromedriver/downloads) 或者 [镜像下载](https://registry.npmmirror.com/binary.html)。和浏览器的版本对应（71比较稳定）。
-- chromedriver 放入环境变量目录，
+
+- 下载 webdriver。chrome 通过 官方下载 或者 镜像下载。和浏览器的版本对应。
+
+- 放入安装目录，python 安装目录或者其他任何地方。
 
 
 
-## 快速开始
+## 启动浏览器
 
-```python
-from selenium.webdriver import Chrome
+安装好后，编写以下程序，就能得到一个正常的浏览器：
 
-driver = Chrome(port=4488)
-driver.get("http://www.baidu.com")
+```Python
+from selenium import webdriver
+driver = webdriver.Chrome()
 ```
+
+
+
+
+## 退出浏览器
+
+在自动化程序运行后，一定要记得关闭浏览器。 如果不关闭，seleium程序会占据后台运行资源，导致运行速度变慢。如果存在多个标签页，可以通过 close 关闭当前标签页。
+
+```Python
+driver.close()
+driver.quit()
+```
+
+
+
+
+如果你实在容易忘记退出浏览器，使用上下文管理器是个不错的选择，它会在你运行程序后自动退出浏览器
+
+```Python
+from selenium import webdriver
+
+# 4、如果不记得使用 driver.quit() 
+with webdriver.Chrome() as driver:
+    do_something()
+```
+
+
+
+
+## 访问 URL 地址
+
+```Python
+driver.get("http://www.jiubing.site")
+```
+
+
+
+
+## 最大化窗口
+
+```Plain Text
+driver.maximize_window()
+```
+
+
+
+
+## 最小化窗口
+
+```Plain Text
+driver.minimize_window()
+```
+
+
+
+
+## 返回上一个页面
+
+```Plain Text
+driver.back()
+```
+
+
+
+
+## 前进
+
+```Plain Text
+driver.forward()
+```
+
+
+
+
+## 刷新当前页面
+
+```Plain Text
+driver.refresh()
+```
+
+
+
+
+## 演示案例
+
+通过以下代码，可以看到具体的演示效果
+
+```Python
+import time
+
+from selenium import webdriver
+
+# 2、得到了一个 Chrome 浏览器, 首字母大写
+driver = webdriver.Chrome()
+
+# 访问网址
+driver.get('https://petstore.octoperf.com/actions/Catalog.action')
+time.sleep(2)
+
+# 刷新
+driver.refresh()
+
+driver.get('http://douban.com')
+
+# 退回上一个网页 back
+time.sleep(2)
+driver.back()
+
+# 前进
+time.sleep(2)
+driver.forward()
+
+# 放大
+time.sleep(2)
+driver.maximize_window()
+
+# 缩小，最小化
+time.sleep(2)
+driver.minimize_window()
+
+# 关闭当前窗口
+driver.close()
+
+# 3、一定要记得关闭浏览器驱动
+# 如果你不关闭，chromedriver 就会停留在后台。
+driver.quit()
+```
+
+
+
+
+## 获取页面属性
+
+在浏览器执行过程中，可以随时获取浏览器的状态和属性。通过下面代码能及时得到当前页面的标题，url 以及源代码展示：
+
+```Python
+driver = webdriver.Chrome()
+
+# 访问网址
+driver.get('https://petstore.octoperf.com/actions/Catalog.action')
+
+print(driver.current_url)
+print(driver.title)
+print(driver.page_source)
+
+# 3、一定要记得关闭浏览器驱动
+# 如果你不关闭，chromedriver 就会停留在后台。
+driver.quit()
+```
+
+
+
+
 
 
 
@@ -182,7 +339,7 @@ def test_drag_and_drop(self,page):
 
 
 
- 
+
 
 
 
