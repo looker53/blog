@@ -40,13 +40,7 @@ def test_selenium():
 
 ![image-20220317141005833](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/image-20220317141005833.png)
 
-
-
-
-
 你又为公司做了一些贡献，你已经完全胜任自动化测试的工作，甚至能够带一两个小弟。他们时不时找你问一些问题，但是对于自动化的维护工作还是要靠你自己，当你请假时，这些工作只能停滞。于是公司希望你做一些改进，让功能测试人员也可以运行这些自动化测试。
-
-
 
 **2、开始测试平台**
 
@@ -71,7 +65,6 @@ def index():
     return render_template('index.html', projects=projects)
 ```
 
-
 上面的代码就是模仿 jenkins， 把自动化测试的脚本放在项目的 workspace 目录下，当访问 / 根路径时，index 函数就会被调用。index 函数的作用就是列举 workspace 目录下的所有项目名，通过 return 展示在前端界面。具体的前端代码如下：
 
 ```xml
@@ -86,8 +79,6 @@ def index():
 
 ![image-20220317141024036](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/image-20220317141024036.png)
 
-
-
 在页面上点击构建，程序会跳转到 flask 设置好的 /build 这个 url 中，这个路由负责运行自动化测试的代码，他会接收用户传过来的 project 参数，找到在 workspace 目录下的项目，再执行自动化测试指令（这里统一用 pytest 指令）。
 
 ```python
@@ -101,9 +92,6 @@ def build():
 到目前为止，完整的流程是这样的：首先，在平台首页会展示所有可以构建的项目，这些项目其实就是把 workspace 子目录当中的目录名列举出来；然后，点击项目旁边的构建按钮，跳转到 /build，根据项目名称执行自动化指令，等待自动化任务执行完成，返回 build success。
 
 ![](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/6cf186284bd64a688fde5426c5990ce8_tplv-k3u1fbpfcp-zoom-1.gif)
-
-
-
 
 **3、优化**
 
@@ -145,8 +133,6 @@ def build_history(id):
 上面读取文件的代码有点问题。当构建重定向到 /build-histrory 后，此时自动化测试脚本才刚刚执行，读取文件中的内容是空的。只有当测试脚本运行，产生越来越多的运行记录，文件中才会出现更多的内容，你必须手动刷新页面才能获取这些新内容。 当自动化任务执行时间很长的时候，你需要不停的刷新 /build-history 页面才能获取最新的构建信息。直到子进程结束，不再有新的内容被写入文件。
 
 ![image-20220317141207731](https://yuztuchuang.oss-cn-beijing.aliyuncs.com/img/image-20220317141207731.png)
-
-
 
 为了动态获取文件数据，你使用了生成器惰性获取数据，在 /build-history 的页面加载过程中，只要运行自动化任务的子进程还在运行，就不停的读取文件内容，将它们动态的返回给前端页面。
 

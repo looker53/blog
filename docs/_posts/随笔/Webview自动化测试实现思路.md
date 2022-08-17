@@ -1,4 +1,5 @@
 ---
+
 title: Webview自动化测试实现思路
 date: 2022-02-25 14:23:15
 permalink: /pages/713cde/
@@ -9,12 +10,12 @@ tags:
   - uiautomator2
   - webview
   - selenium
+
 ---
+
 移动端 app 自动化框架很多，但是有一些框架因为不支持混合应用测试，一直没有完全流行。比较典型的是经典的 Python 框架 uiautomator2, 这个框架简单好用，没有 appium 那样复杂的 api 调用，受到不少 python 自动化工程师的青睐。
 
 但是不管是官方文档，还是民间教程，基本都没有涉及到用它做混合应用测试，本文提供一种非常简单的方法，只需要多加 4 行代码，就能让 uiautomator2 支持混合应用测试。
-
-
 
 ## 什么是混合应用
 
@@ -24,8 +25,6 @@ Hybrid App（混合模式移动应用）是介于 web app和native app之间的�
 
 目前主流的移动端 app 测试框架 appium 具备混合应用测试的能力，但是这个框架搭建和使用都比较麻烦，封装的方法也没有那么 pythonic，因此有很多公司不想使用，他们更加喜欢简洁优雅的 python uiautomator2 框架。 非常遗憾，这个框架目前没有支持混合应用测试。
 
-
-
 ## WebView自动化测试步骤
 
 - 第一步，通过原生操作进入 webview 网页；
@@ -34,8 +33,6 @@ Hybrid App（混合模式移动应用）是介于 web app和native app之间的�
 
 这中间的关键步骤在于如何使用 selenium, 如果直接打开一个新的 selenium 会话，那么会打开一个新的页面，和 app 中的 webview 是分开的，因此无法测到嵌套网页。 selenium 必须要和 app 建立某种关系，使他们绑定在一起，操作 selenium 时就是直接操作 app 当中的网页。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/885364bc37aa40e490890755bf19a3f1.png)
-
-
 
 ## 通过 uiautomator2 进入 webview
 
@@ -47,8 +44,6 @@ d.app_start('com.github.android_app_bootstrap')
 d(text='Login').click()
 d(text='Baidu').click()
 ```
-
-
 
 ## selenium 连接 webview
 
@@ -69,8 +64,6 @@ driver.implicitly_wait(8)
 driver.find_element('id', 'index-kw').send_keys('你好')
 ```
 
-
-
 ## WebView自动化测试在浏览器中的说明
 
 是不是很好奇，我怎么知道要这么写代码，才能连接 webview ，达到测试效果？ 其实世间没有那么多神秘的学习方法，只要你肯用心，一定是可以找到学习的路径的。 这段代码清清楚楚的写在 [chrome webdriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started/getting-started---android) 的官方文档中，只是，你可能打不开。 截屏看一下：
@@ -80,4 +73,3 @@ driver.find_element('id', 'index-kw').send_keys('你好')
 
 **展示效果：**
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/af3be9006efd42f5899d14fa88880548.gif)
-

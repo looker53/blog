@@ -6,9 +6,8 @@ sidebar: auto
 categories:
   - 日记
 tags:
-  - 
+  - k8s
 ---
-
 
 ## 参考
 
